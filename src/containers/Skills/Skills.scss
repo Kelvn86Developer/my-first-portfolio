@@ -1,0 +1,104 @@
+$container-width-lg: 76%;
+$container-width-md: 90%;
+$container-width-sm: 94%;
+
+$primary-color: rgba(219, 62, 62, 0.8);
+$color-white-1: rgba(255, 255, 255);
+$opacity-1: 0.8;
+$opacity-2: 0.9;
+$opacity-3: 0.5;
+
+$bg-1: #171525;
+$bg-2: #22202F;
+
+#skills {
+    .app__social,
+    .app__navigation {
+        bottom: 30%;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            margin-bottom: 70px;
+
+            p {
+                color: $primary-color;
+                font-size: 19px;
+                font-weight: bold;
+
+            }
+
+            h3 {
+                color: $color-white-1;
+                font-weight: 400;
+                opacity: $opacity-1;
+            }
+
+            h2 {
+                color: $color-white-1;
+                font-weight: 700;
+                opacity: $opacity-1;
+            }
+        }
+
+        .skills-card {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            background: $bg-2;
+            gap: 1rem;
+            padding: 1rem;
+            height: 60vh;
+
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+
+         
+        }
+
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: .1rem;
+
+            p,span,h2 {
+                color: $color-white-1;
+                opacity: $opacity-1;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            h2 {
+                font-size: .5rem;
+                font-weight: 600;
+            }
+
+            p {
+                color: $primary-color;
+                font-size: 14px;
+                font-weight: bold;
+
+            }
+                
+            }
+    }
+}

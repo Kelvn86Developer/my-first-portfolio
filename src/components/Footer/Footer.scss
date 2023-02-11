@@ -1,0 +1,54 @@
+$primary-color: rgba(219, 62, 62, 0.8);
+$color-white-1: rgba(255, 255, 255);
+
+$opacity-1: 0.8;
+$opacity-2: 0.9;
+$opacity-3: 0.5;
+
+$btn-color-1: #22202F;
+$bg-1: #171525;
+$bg-2: #22202F;
+
+
+footer {
+    width: 100%;
+    border-top: 3px solid $primary-color;
+    padding: 3rem 0;
+
+    .container {
+        justify-content: space-between;
+
+        .copyright {
+            display: flex;
+            gap: 1rem;
+
+            span {
+                color: $color-white-1;
+                opacity: $opacity-1;
+                font-weight: bold;
+            }
+
+        }
+
+        .lines {
+            display: flex;
+            gap: .2rem;
+            flex-direction: column;
+
+            .line-item {
+                background-color: $primary-color;
+                height: 5px;
+            }
+
+            .line-item-1 {
+              padding: .1rem .5rem;
+              align-self: flex-end;
+              width: 20px;
+            }
+            .line-item-2 {
+              padding: .1rem 1rem;
+              width: 30px;
+            }
+        }
+    }
+}

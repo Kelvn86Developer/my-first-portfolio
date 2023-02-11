@@ -1,0 +1,331 @@
+$container-width-lg: 76%;
+$container-width-md: 90%;
+$container-width-sm: 94%;
+
+$primary-color: rgba(219, 62, 62, 0.8);
+$color-white-1: rgba(255, 255, 255);
+$opacity-1: 0.8;
+$opacity-2: 0.9;
+$opacity-3: 0.5;
+$btn-color-1: #22202F;
+$bg-1: #171525;
+$bg-2: #22202F;
+
+$box-shadow: 0 3px 6px #00000099;
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+
+    @media screen and ( max-width: 1024px ){
+        font-size: 2rem;
+    }
+
+    @media screen and ( max-width: 710px ){
+        font-size: 1.8rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+
+    @media screen and ( max-width: 1024px ){
+        font-size: 1.5rem;
+    }
+
+    @media screen and ( max-width: 710px ){
+        font-size: 1.2rem;
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    @media screen and ( max-width: 1024px ){
+        font-size: 1rem;
+    }
+
+    @media screen and ( max-width: 710px ){
+        font-size: 0.8rem;
+    }
+}
+
+section {
+
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: rgb(46, 46, 46);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+.bars {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    top: 10px;
+    left: 60px;
+    justify-content: space-between;
+
+    .bar {
+        background: $bg-2;
+        padding: .5rem 5rem;
+        box-shadow: $box-shadow;
+
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    @media screen and (max-width: 630px) {
+        display: none;
+            
+        }
+}
+
+.line {
+    width: 28%;
+    height: 3px;
+    background: $primary-color;
+}
+.circle {
+    background: $bg-1;
+}
+.app__bg-1 {
+    background: $bg-1;
+}
+
+.app__bg-2 {
+    background: $bg-2;
+}
+
+
+.container {
+
+    width: $container-width-lg;
+    display: flex;
+    margin: 0 auto;
+
+    @media screen  and (max-width: 1024px) {
+        width: $container-width-md;
+      
+        
+    }
+    @media screen  and (max-width: 700px) {
+        width: $container-width-sm;
+    }
+
+}
+
+.grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .25rem;
+
+    @media screen and ( max-width: 700px ){
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    @media screen and ( max-width: 1024px ){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+.btn {
+    background: transparent;
+
+    text-align: center;
+
+    border: 1px solid $primary-color;
+    cursor: pointer;
+
+    a {
+        background: transparent;
+        color: white;
+    }
+
+    &:hover {
+        background: transparent;
+        border: 1px solid $primary-color;
+        
+        a {
+            color: $primary-color;
+        }
+    }
+}
+
+.btn__primary {
+    background: transparent;
+    outline: none;
+    border: 0;
+}
+
+.app__social{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 45%;
+    left: 20px;
+
+    .social {
+        cursor: pointer;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        padding: .05rem;
+      
+
+        background: #46364a;
+
+        width: 40px;
+        height: 40px;
+      
+     
+        margin: 0.25rem 0;
+     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+
+            svg {
+                color: $color-white-1;
+            }
+        }
+    }
+
+      svg {
+            width: 15px;
+            height: 15px;
+            color: $primary-color;
+        }
+
+       
+
+        @media screen and (min-width: 2000px) {
+            width: 70px;
+            height: 70px;
+
+            margin: 0.5rem 0;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+            
+        }
+
+        @media screen and (max-width: 810px) {
+        display: none;
+            
+        }
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    p {
+        color: $primary-color;
+        font-size: 19px;
+        font-weight: bold;
+
+    }
+
+    h3 {
+        color: $color-white-1;
+        font-weight: 400;
+        opacity: $opacity-1;
+    }
+
+    h2 {
+        color: $color-white-1;
+        font-weight: 700;
+        opacity: $opacity-1;
+    }
+}
+
+
+.app__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+    bottom: 50%;
+    right: 20px;
+
+    padding: 1rem;
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-color: #cbcbcb;
+        margin: 0.5rem;
+        transition: background-color 0.2s ease-in-out;
+        -webkit-transition: background-color 0.2s ease-in-out;
+        -moz-transition: background-color 0.2s ease-in-out;
+        -ms-transition: background-color 0.2s ease-in-out;
+        -o-transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+
+    @media screen and (max-width: 810px) {
+        display: none;
+            
+        }
+}
